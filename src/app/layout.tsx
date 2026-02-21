@@ -1,23 +1,21 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Geist } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/components/providers/theme-provider'
 import { Toaster } from '@/components/ui/sonner'
 
+// Geist Sans 폰트 설정
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
 })
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-})
-
 export const metadata: Metadata = {
-  title: 'NextJS Starter - 모던 웹 스타터킷',
-  description:
-    'Next.js 15, TypeScript, TailwindCSS, ShadcnUI로 구축된 프로덕션 준비가 완료된 웹 애플리케이션 스타터킷',
+  title: {
+    default: '나만의 레시피 모음',
+    template: '%s | 나만의 레시피 모음',
+  },
+  description: 'Notion으로 관리하는 나만의 레시피 아카이브',
 }
 
 export default function RootLayout({
@@ -27,9 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

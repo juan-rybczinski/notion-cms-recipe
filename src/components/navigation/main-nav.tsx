@@ -4,14 +4,8 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 
-interface NavItem {
-  title: string
-  href: string
-}
-
-const navItems: NavItem[] = [
-  { title: '홈', href: '/' },
-]
+// 데스크톱 네비게이션 메뉴 항목
+const navItems = [{ title: '홈', href: '/' }]
 
 export function MainNav() {
   const pathname = usePathname()
