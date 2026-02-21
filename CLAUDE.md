@@ -82,3 +82,8 @@ npx shadcn@latest add button
 npm run check-all   # 모든 검사 통과 확인
 npm run build       # 빌드 성공 확인
 ```
+
+## Project Context
+
+- **PRD 문서**: `@docs/PRD.md`
+- **개발 로드맵**: `@docs/ROADMAP.md`
